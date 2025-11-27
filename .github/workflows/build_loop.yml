@@ -218,7 +218,6 @@ jobs:
           dexcom_upload_readings \
           override_sens \
           now_line \
-          2hlollipop \
           meal_days \
           live_activity \
           negative_insulin 
@@ -226,11 +225,11 @@ jobs:
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
           
-          # Loop: lukiboy21-patch-2 File: endre standard karbotider
-          curl https://github.com/lukiboy21/Loop/commit/9a59c5dcc5d8e52ca742d7b7703728cdd93a48dd.patch | git apply -v --directory=Loop
+          # Loop: lukiboy21-patch-1: Endre standard karbo tider
+          curl https://github.com/lukiboy/Loop/commit/2f39d93a576b4144c4206bf887e3720098b9b780.patch | git apply -v --directory=Loop
 
-          # LoopKit: lukiboy21-patch-2 File: endre Lyumjev verdier
-          curl https://github.com/lukiboy21/Loopkit/commit/4520183715b8f870a0a566a898c52e9a24ee5020.patch | git apply -v --directory=LoopKit
+          # Loopkit: lukiboy: cendre lyumjev verdier
+          curl https://github.com/lukiboy/LoopKit/commit/e724c07eb6ca3b84f8cdae0c4f1eaf67ddba92e4.patch | git apply -v --directory=Loopkit
          
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
