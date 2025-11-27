@@ -226,6 +226,12 @@ jobs:
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
           
+          # Loop: lukiboi21-patch-1 File: endre standard karbotider
+          curl https://github.com/lukiboy/Module/commit/c9377eba25fb30a1ddb80b58c8a816b21b769db1.patch | git apply -v --directory=Loop
+
+          # LoopKit: lukiboi21-patch-1 File: endre Lyumjev verdier
+          curl https://github.com/lukiboy/Module/commit/957ca4dceea63362522c620fe0695f3a07714514.patch | git apply -v --directory=LoopKit
+          
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
