@@ -226,10 +226,10 @@ jobs:
           # more customizations can be pasted after this line
           
           # Loop: lukiboy21-patch-1: Endre standard karbo tider
-          curl https://github.com/lukiboy/Loop/commit/2f39d93a576b4144c4206bf887e3720098b9b780.patch | git apply -v --directory=Loop
+          curl https://github.com/lukiboy21/Loop/commit/2f39d93a576b4144c4206bf887e3720098b9b780.patch | git apply -v --directory=Loop
 
           # Loopkit: lukiboy: cendre lyumjev verdier
-          curl https://github.com/lukiboy/LoopKit/commit/e724c07eb6ca3b84f8cdae0c4f1eaf67ddba92e4.patch | git apply -v --directory=Loopkit
+          curl https://github.com/lukiboy21/LoopKit/commit/e724c07eb6ca3b84f8cdae0c4f1eaf67ddba92e4.patch | git apply -v --directory=Loopkit
          
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
