@@ -229,9 +229,9 @@ jobs:
           # Loop: lukiboy21-patch-2 File: endre standard karbotider
           curl https://github.com/lukiboy21/Loop/commit/9a59c5dcc5d8e52ca742d7b7703728cdd93a48dd.patch | git apply -v --directory=Loop
 
-          # LoopKit: lukiboi21-patch-1 File: endre Lyumjev verdier
-          curl https://github.com/lukiboy21/LoopKit/commit/957ca4dceea63362522c620fe0695f3a07714514.patch | git apply -v --directory=LoopKit
-        
+         # LoopKit: lukiboy21-patch-2 File: endre Lyumjev verdier
+         curl https://github.com/lukiboy21/Loopkit/commit/4520183715b8f870a0a566a898c52e9a24ee5020.patch | git apply -v --directory=LoopKit
+         
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
