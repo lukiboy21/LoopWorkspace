@@ -234,6 +234,8 @@ jobs:
 
           # Loopkit: lukiboy: cendre lyumjev verdier
           curl https://github.com/lukiboy21/LoopKit/commit/e724c07eb6ca3b84f8cdae0c4f1eaf67ddba92e4.patch | git apply -v --directory=Loopkit
+
+          export SCRIPT_BRANCH=prelim_ai_food && export PATCH_BRANCH=prelim_ai_food && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/loopandlearn/lnl-scripts/$SCRIPT_BRANCH/CustomizationSelect.sh)" food_search
          
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
