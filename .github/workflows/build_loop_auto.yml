@@ -234,6 +234,31 @@ jobs:
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
+          # The lines below add the customizations listed using the CustomizationSelect script
+          # The "\" is a continuation character 
+          #   the line following a "\" should not be blank
+          /bin/bash -c "$(curl -fsSL \
+          https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
+          low_carb_limit \
+          override_sens \
+          now_line \
+          lnl_icon \
+          watch_title \
+          meal_days \
+          profiles \
+          basal_lock \
+          negative_insulin
+
+          # the final customization listed above CANNOT have a continuation character
+          # more customizations can be pasted after this line
+          
+          # Loop: lukiboy21-patch-1: Endre standard karbo tider
+          curl https://github.com/lukiboy21/Loop/commit/2f39d93a576b4144c4206bf887e3720098b9b780.patch | git apply -v --directory=Loop
+
+          # Loopkit: lukiboy: cendre lyumjev verdier
+          curl https://github.com/lukiboy21/LoopKit/commit/e724c07eb6ca3b84f8cdae0c4f1eaf67ddba92e4.patch | git apply -v --directory=Loopkit
+
+          export SCRIPT_BRANCH=prelim_ai_food && export PATCH_BRANCH=prelim_ai_food && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/loopandlearn/lnl-scripts/$SCRIPT_BRANCH/CustomizationSelect.sh)" food_search
 
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
