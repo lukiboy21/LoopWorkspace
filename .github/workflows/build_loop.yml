@@ -215,7 +215,7 @@ jobs:
           override_sens \
           now_line \
           lnl_icon \
-          watch_title \
+          cgm_sensor_notes \
           meal_days \
           profiles \
           basal_lock \
